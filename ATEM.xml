@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ATEM</name>
+    </assembly>
+    <members>
+        <member name="M:ATEM.ATEM.Stitch``1(``0[],System.String)">
+            <summary>
+            Combines all the elements of an array into a string.
+            </summary>
+            <param name="joining_string">The string to put in between each element of the array</param>
+            <returns>The elements of the array combined into a string</returns>
+        </member>
+        <member name="M:ATEM.ATEM.Stitch``1(``0[],System.Char)">
+            <summary>
+            Combines all the elements of an array into a string.
+            </summary>
+            <param name="joining_char">The character to put in between each element of the array</param>
+            <returns>The elements of the array combined into a string</returns>
+        </member>
+        <member name="M:ATEM.ATEM.Stitch``1(``0[])">
+            <summary>
+            Combines all the elements of an array into a string.
+            </summary>
+            <returns>The elements of the array combined into a string</returns>
+        </member>
+        <member name="M:ATEM.ATEM.Stitch``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Combines all the elements of a list into a string.
+            </summary>
+            <param name="joining_string">The string to put in between each element of the array</param>
+            <returns>The elements of the array combined into a string</returns>
+        </member>
+        <member name="M:ATEM.ATEM.Stitch``1(System.Collections.Generic.List{``0},System.Char)">
+            <summary>
+            Combines all the elements of a list into a string.
+            </summary>
+            <param name="joining_char">The character to put in between each element of the array</param>
+            <returns>The elements of the array combined into a string</returns>
+        </member>
+        <member name="M:ATEM.ATEM.Stitch``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Combines all the elements of a list into a string.
+            </summary>
+            <returns>The elements of the array combined into a string</returns>
+        </member>
+        <member name="M:ATEM.ATEM.SubArray``1(``0[],System.Int32,System.Int32)">
+            <summary>
+            Retrieves a subarray from this instance. This subarray starts at a specified
+            element position and has a specified length
+            </summary>
+            <param name="index">The zero-based starting element position of a subarray in this instance</param>
+            <param name="length">The number of elements in the subarray</param>
+            <returns>An array that is equivalent to the subarray of length length that begins at
+            startIndex in this instance.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
+            or length is less than zero.</exception>
+        </member>
+        <member name="M:ATEM.ATEM.SubArray``1(``0[],System.Int32)">
+            <summary>
+            Retrieves a subarray from this instance. This subarray starts at a specified
+            element position and continues to the end of the array
+            </summary>
+            <param name="index">The zero-based starting element position of a subarray in this instance</param>
+            <returns>An array that is equivalent to the subarray that begins at startIndex in this
+            instance, or new object[] { } if startIndex is equal to the length of this
+            instance</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
+            is less than zero.</exception>
+        </member>
+        <member name="M:ATEM.ATEM.SubList``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)">
+            <summary>
+            Retrieves a sublist from this instance. This sublist starts at a specified
+            element position and has a specified length
+            </summary>
+            <param name="index">The zero-based starting element position of a sublist in this instance</param>
+            <param name="length">The number of elements in the sublist</param>
+            <returns>An list that is equivalent to the sublist of length length that begins at
+            startIndex in this instance.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
+            or length is less than zero.</exception>
+        </member>
+        <member name="M:ATEM.ATEM.SubList``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            Retrieves a sublist from this instance. This sublist starts at a specified
+            element position and continues to the end of the list
+            </summary>
+            <param name="index">The zero-based starting element position of a sublist in this instance</param>
+            <returns>An list that is equivalent to the sublist that begins at startIndex in this
+            instance, or new object[] { } if startIndex is equal to the length of this
+            instance</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
+            is less than zero.</exception>
+        </member>
+        <member name="M:ATEM.ATEM.GetFromLast``1(``0[],System.Int32)">
+            <summary>
+            Returns an element from an array, counting from the end of the array rather than the start
+            Imagine T[i] if T[i] called the last element of the array
+            </summary>
+            <param name="index">The position in the array you want to get from, counting from the last element in the array. The last element is 0.</param>
+            <returns>The requested item in the array</returns>
+        </member>
+        <member name="M:ATEM.ATEM.SetFromLast``1(``0[],System.Int32,``0)">
+            <summary>
+            Sets an element to an array, counting from the end of the array rather than the start
+            Imagine T[i] = val if T[i] called the last element of the array
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <param name="index">The position in the array you want to get from, counting from the last element in the array. The last element is 0.</param>
+            <param name="value">The value to set the index position to.</param>
+            <returns>value</returns>
+        </member>
+        <member name="M:ATEM.ATEM.GetFromLast``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            Returns an element from an array, counting from the end of the array rather than the start
+            Imagine T[i] if T[i] called the last element of the array
+            </summary>
+            <param name="index">The position in the array you want to get from, counting from the last element in the array. The last element is 0.</param>
+            <returns>The requested item in the array</returns>
+        </member>
+        <member name="M:ATEM.ATEM.SetFromLast``1(System.Collections.Generic.List{``0},System.Int32,``0)">
+            <summary>
+            Sets an element to an array, counting from the end of the array rather than the start
+            Imagine T[i] = val if T[i] called the last element of the array
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <param name="index">The position in the array you want to get from, counting from the last element in the array. The last element is 0.</param>
+            <param name="value">The value to set the index position to.</param>
+            <returns>value</returns>
+        </member>
+        <member name="M:ATEM.ATEM.Split(System.String,System.String[])">
+            <summary>
+            Returns a string array that contains the substrings in this instance that are
+            delimited by elements of a specified Unicode character array.
+            </summary>
+            <param name="separator">An array of Unicode strings that delimit the substrings in this instance,
+            an empty array that contains no delimiters, or null.</param>
+            <returns>An array whose elements contain the substrings in this instance that are delimited
+            by one or more strings in separator. For more information, see the Remarks
+            section.</returns>
+        </member>
+        <member name="M:ATEM.ATEM.Split(System.String,System.String[],System.Int32)">
+            <summary>
+            Returns a string array that contains the substrings in this string that are delimited
+            by elements of a specified string array. Parameters specify the maximum number
+            of substrings to return and whether to return empty array elements.
+            </summary>
+            <param name="separator">A string array that delimits the substrings in this string, an empty array that
+            contains no delimiters, or null.</param>
+            <param name="count">The maximum number of substrings to return.</param>
+            <returns>An array whose elements contain the substrings in this string that are delimited
+            by one or more strings in separator. For more information, see the Remarks section.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">count is negative.</exception>
+            <exception cref="T:System.ArgumentException">options is not one of the System.StringSplitOptions values.</exception>
+        </member>
+    </members>
+</doc>
