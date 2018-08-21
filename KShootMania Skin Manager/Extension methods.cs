@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KSM_Skin_Manager_Help
+namespace KShootMania_Skin_Manager
 {
     public static class Extension_methods
     {

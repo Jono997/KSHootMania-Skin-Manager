@@ -4,11 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KShootMania Skin Manager", "KShootMania Skin Manager\KShootMania Skin Manager.csproj", "{C7B10D1C-DBB1-4688-8962-7CEED65A8A21}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C22DC76C-5F70-4928-BD66-385A7499F886} = {C22DC76C-5F70-4928-BD66-385A7499F886}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSM Skin Manager Help", "KSM Skin Manager Help\KSM Skin Manager Help.csproj", "{C22DC76C-5F70-4928-BD66-385A7499F886}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C7B10D1C-DBB1-4688-8962-7CEED65A8A21} = {C7B10D1C-DBB1-4688-8962-7CEED65A8A21}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

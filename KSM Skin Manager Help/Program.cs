@@ -16,7 +16,7 @@ namespace KSM_Skin_Manager_Help
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HelpForm());
+            Application.Run(new KShootMania_Skin_Manager.HelpForm());
         }
     }
 }

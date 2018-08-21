@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ATEM;
 using System.Diagnostics;
 
-namespace KSM_Skin_Manager_Help
+namespace KShootMania_Skin_Manager
 {
     public partial class HelpForm : Form
     {

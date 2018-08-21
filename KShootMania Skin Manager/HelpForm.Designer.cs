@@ -1,4 +1,4 @@
-﻿namespace KSM_Skin_Manager_Help
+﻿namespace KShootMania_Skin_Manager
 {
     partial class HelpForm
     {

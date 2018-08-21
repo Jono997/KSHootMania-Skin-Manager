@@ -165,9 +165,10 @@ namespace KShootMania_Skin_Manager
             }
         }
 
-        private void Change_skinForm_HelpButtonClicked(object sender, CancelEventArgs e)
+        private void HelpButton_Click(object sender, EventArgs e)
         {
-            Process.Start(CommonData.ExeDir + "\\KSM Skin Manager Help.exe");
+            HelpForm help = new HelpForm();
+            help.ShowDialog();
         }
     }
 }
