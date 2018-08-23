@@ -4,47 +4,52 @@
         <name>ATEM</name>
     </assembly>
     <members>
-        <member name="M:ATEM.ATEM.Stitch``1(``0[],System.String)">
+        <member name="T:ATEM.ATEMMethods">
+            <summary>
+            A class containing all of the methods in ATEM
+            </summary>
+        </member>
+        <member name="M:ATEM.ATEMMethods.Stitch``1(``0[],System.String)">
             <summary>
             Combines all the elements of an array into a string.
             </summary>
             <param name="joining_string">The string to put in between each element of the array</param>
             <returns>The elements of the array combined into a string</returns>
         </member>
-        <member name="M:ATEM.ATEM.Stitch``1(``0[],System.Char)">
+        <member name="M:ATEM.ATEMMethods.Stitch``1(``0[],System.Char)">
             <summary>
             Combines all the elements of an array into a string.
             </summary>
             <param name="joining_char">The character to put in between each element of the array</param>
             <returns>The elements of the array combined into a string</returns>
         </member>
-        <member name="M:ATEM.ATEM.Stitch``1(``0[])">
+        <member name="M:ATEM.ATEMMethods.Stitch``1(``0[])">
             <summary>
             Combines all the elements of an array into a string.
             </summary>
             <returns>The elements of the array combined into a string</returns>
         </member>
-        <member name="M:ATEM.ATEM.Stitch``1(System.Collections.Generic.List{``0},System.String)">
+        <member name="M:ATEM.ATEMMethods.Stitch``1(System.Collections.Generic.List{``0},System.String)">
             <summary>
             Combines all the elements of a list into a string.
             </summary>
             <param name="joining_string">The string to put in between each element of the array</param>
             <returns>The elements of the array combined into a string</returns>
         </member>
-        <member name="M:ATEM.ATEM.Stitch``1(System.Collections.Generic.List{``0},System.Char)">
+        <member name="M:ATEM.ATEMMethods.Stitch``1(System.Collections.Generic.List{``0},System.Char)">
             <summary>
             Combines all the elements of a list into a string.
             </summary>
             <param name="joining_char">The character to put in between each element of the array</param>
             <returns>The elements of the array combined into a string</returns>
         </member>
-        <member name="M:ATEM.ATEM.Stitch``1(System.Collections.Generic.List{``0})">
+        <member name="M:ATEM.ATEMMethods.Stitch``1(System.Collections.Generic.List{``0})">
             <summary>
             Combines all the elements of a list into a string.
             </summary>
             <returns>The elements of the array combined into a string</returns>
         </member>
-        <member name="M:ATEM.ATEM.SubArray``1(``0[],System.Int32,System.Int32)">
+        <member name="M:ATEM.ATEMMethods.SubArray``1(``0[],System.Int32,System.Int32)">
             <summary>
             Retrieves a subarray from this instance. This subarray starts at a specified
             element position and has a specified length
@@ -56,7 +61,7 @@
             <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
             or length is less than zero.</exception>
         </member>
-        <member name="M:ATEM.ATEM.SubArray``1(``0[],System.Int32)">
+        <member name="M:ATEM.ATEMMethods.SubArray``1(``0[],System.Int32)">
             <summary>
             Retrieves a subarray from this instance. This subarray starts at a specified
             element position and continues to the end of the array
@@ -68,7 +73,7 @@
             <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
             is less than zero.</exception>
         </member>
-        <member name="M:ATEM.ATEM.SubList``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)">
+        <member name="M:ATEM.ATEMMethods.SubList``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)">
             <summary>
             Retrieves a sublist from this instance. This sublist starts at a specified
             element position and has a specified length
@@ -80,7 +85,7 @@
             <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
             or length is less than zero.</exception>
         </member>
-        <member name="M:ATEM.ATEM.SubList``1(System.Collections.Generic.List{``0},System.Int32)">
+        <member name="M:ATEM.ATEMMethods.SubList``1(System.Collections.Generic.List{``0},System.Int32)">
             <summary>
             Retrieves a sublist from this instance. This sublist starts at a specified
             element position and continues to the end of the list
@@ -92,7 +97,7 @@
             <exception cref="T:System.ArgumentOutOfRangeException">startIndex plus length indicates a position not within this instance. -or- startIndex
             is less than zero.</exception>
         </member>
-        <member name="M:ATEM.ATEM.GetFromLast``1(``0[],System.Int32)">
+        <member name="M:ATEM.ATEMMethods.GetFromLast``1(``0[],System.Int32)">
             <summary>
             Returns an element from an array, counting from the end of the array rather than the start
             Imagine T[i] if T[i] called the last element of the array
@@ -100,7 +105,7 @@
             <param name="index">The position in the array you want to get from, counting from the last element in the array. The last element is 0.</param>
             <returns>The requested item in the array</returns>
         </member>
-        <member name="M:ATEM.ATEM.SetFromLast``1(``0[],System.Int32,``0)">
+        <member name="M:ATEM.ATEMMethods.SetFromLast``1(``0[],System.Int32,``0)">
             <summary>
             Sets an element to an array, counting from the end of the array rather than the start
             Imagine T[i] = val if T[i] called the last element of the array
@@ -111,7 +116,7 @@
             <param name="value">The value to set the index position to.</param>
             <returns>value</returns>
         </member>
-        <member name="M:ATEM.ATEM.GetFromLast``1(System.Collections.Generic.List{``0},System.Int32)">
+        <member name="M:ATEM.ATEMMethods.GetFromLast``1(System.Collections.Generic.List{``0},System.Int32)">
             <summary>
             Returns an element from an array, counting from the end of the array rather than the start
             Imagine T[i] if T[i] called the last element of the array
@@ -119,7 +124,7 @@
             <param name="index">The position in the array you want to get from, counting from the last element in the array. The last element is 0.</param>
             <returns>The requested item in the array</returns>
         </member>
-        <member name="M:ATEM.ATEM.SetFromLast``1(System.Collections.Generic.List{``0},System.Int32,``0)">
+        <member name="M:ATEM.ATEMMethods.SetFromLast``1(System.Collections.Generic.List{``0},System.Int32,``0)">
             <summary>
             Sets an element to an array, counting from the end of the array rather than the start
             Imagine T[i] = val if T[i] called the last element of the array
@@ -130,7 +135,7 @@
             <param name="value">The value to set the index position to.</param>
             <returns>value</returns>
         </member>
-        <member name="M:ATEM.ATEM.Split(System.String,System.String[])">
+        <member name="M:ATEM.ATEMMethods.Split(System.String,System.String[])">
             <summary>
             Returns a string array that contains the substrings in this instance that are
             delimited by elements of a specified Unicode character array.
@@ -141,7 +146,7 @@
             by one or more strings in separator. For more information, see the Remarks
             section.</returns>
         </member>
-        <member name="M:ATEM.ATEM.Split(System.String,System.String[],System.Int32)">
+        <member name="M:ATEM.ATEMMethods.Split(System.String,System.String[],System.Int32)">
             <summary>
             Returns a string array that contains the substrings in this string that are delimited
             by elements of a specified string array. Parameters specify the maximum number
@@ -154,6 +159,71 @@
             by one or more strings in separator. For more information, see the Remarks section.</returns>
             <exception cref="T:System.ArgumentOutOfRangeException">count is negative.</exception>
             <exception cref="T:System.ArgumentException">options is not one of the System.StringSplitOptions values.</exception>
+        </member>
+        <member name="M:ATEM.ATEMMethods.Invert(System.Int32,System.Int32)">
+            <summary>
+            returns the number of equal and opposite distance of this from axis
+            </summary>
+            <param name="axis">The number to invert around</param>
+            <returns></returns>
+        </member>
+        <member name="T:ATEM.ATEMMethods.FolderExistsResponse">
+            <summary>
+            Specifies what applicable Overload:ATEMMethods.CopyDirectory overloads should do in the event of destFolderName already existing
+            </summary>
+        </member>
+        <member name="F:ATEM.ATEMMethods.FolderExistsResponse.Reject">
+            <summary>
+            An instance of the IOException class is thrown
+            </summary>
+        </member>
+        <member name="F:ATEM.ATEMMethods.FolderExistsResponse.MergeKeep">
+            <summary>
+            The two directories' contents will be merged into destFolderName.
+            If both directories have a file of the same name, the one in sourceFolderName will be discarded.
+            </summary>
+        </member>
+        <member name="F:ATEM.ATEMMethods.FolderExistsResponse.MergeOverwrite">
+            <summary>
+            The two directories' contents will be merged into destFolderName.
+            If both directories have a file of the same name, the one in sourceFolderName will overwrite the one already in destFolderName.
+            </summary>
+        </member>
+        <member name="M:ATEM.ATEMMethods.CopyDirectory(System.String,System.String,ATEM.ATEMMethods.FolderExistsResponse,System.Boolean)">
+            <summary>
+            Copies an existing directory and its contents to a new directory.
+            All exceptions this can throw are exceptions thrown by System.IO.File.Copy and System.IO.Directory.CreateDirectory
+            </summary>
+            <param name="sourceFolderName">The directory to copy</param>
+            <param name="destFolderName">The name of the destination directory. This cannot be an existing directory.</param>
+            <param name="folderExistsResponse">The method by which destFolderName already existing is handled</param>
+            <param name="copySubdirectories">If true, sourceFolderName's subdirectories and their subdirectories are also copied.</param>
+        </member>
+        <member name="M:ATEM.ATEMMethods.CopyDirectory(System.String,System.String,ATEM.ATEMMethods.FolderExistsResponse)">
+            <summary>
+            Copies an existing directory and its contents to a new directory.
+            All exceptions this can throw are exceptions thrown by System.IO.File.Copy and System.IO.Directory.CreateDirectory
+            </summary>
+            <param name="sourceFolderName">The directory to copy</param>
+            <param name="destFolderName">The name of the destination directory. This cannot be an existing directory.</param>
+            <param name="folderExistsResponse">The method by which destFolderName already existing is handled</param>
+        </member>
+        <member name="M:ATEM.ATEMMethods.CopyDirectory(System.String,System.String)">
+            <summary>
+            Copies an existing directory and its contents to a new directory.
+            All exceptions this can throw are exceptions thrown by System.IO.File.Copy and System.IO.Directory.CreateDirectory
+            </summary>
+            <param name="sourceFolderName">The directory to copy</param>
+            <param name="destFolderName">The name of the destination directory. This cannot be an existing directory.</param>
+        </member>
+        <member name="M:ATEM.ATEMMethods.CopyDirectory(System.String,System.String,System.Boolean)">
+            <summary>
+            Copies an existing directory and its contents to a new directory.
+            All exceptions this can throw are exceptions thrown by System.IO.File.Copy and System.IO.Directory.CreateDirectory
+            </summary>
+            <param name="sourceFolderName">The directory to copy</param>
+            <param name="destFolderName">The name of the destination directory. This cannot be an existing directory.</param>
+            <param name="copySubdirectories">If true, sourceFolderName's subdirectories and their subdirectories are also copied.</param>
         </member>
     </members>
 </doc>

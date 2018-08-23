@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.Compression;
 using System.Security.Principal;
+using ATEM;
 
 namespace KShootMania_Skin_Manager
 {
@@ -60,27 +61,19 @@ namespace KShootMania_Skin_Manager
             #region Copy default skin
             #region Create unique id
                 Random randint = new Random();
-                int id = randint.Next(9999);
-                while (Directory.Exists(CommonData.ExeDir + '\\' + id.ToString()))
+                string id = randint.Next(9999).ToString();
+                while (Directory.Exists(CommonData.ExeDir + '\\' + id))
                 {
-                    id = randint.Next(9999);
+                    id = randint.Next(9999).ToString();
                 }
             #endregion
 
-            ZipFile.ExtractToDirectory(Zip_fileTextBox.Text, CommonData.ExeDir + '\\' + id.ToString());
+            ZipFile.ExtractToDirectory(Zip_fileTextBox.Text, CommonData.ExeDir + '\\' + id);
 
-            Directory.CreateDirectory(CommonData.SkinDir + "\\Default skin\\imgs");
-            foreach (string file in Directory.GetFiles(CommonData.ExeDir + "\\" + id.ToString() + "\\kshootmania\\imgs"))
-            {
-                File.Copy(file, CommonData.SkinDir + "\\Default skin\\imgs\\" + file.Split('\\').Last());
-            }
-            Directory.CreateDirectory(CommonData.SkinDir + "\\Default skin\\se");
-            foreach (string file in Directory.GetFiles(CommonData.ExeDir + "\\" + id.ToString() + "\\kshootmania\\se"))
-            {
-                File.Copy(file, CommonData.SkinDir + "\\Default skin\\se\\" + file.Split('\\').Last());
-            }
+            ATEMMethods.CopyDirectory(CommonData.ExeDir + "\\" + id + "\\kshootmania\\imgs", CommonData.SkinDir + "\\Default skin\\imgs", true);
+            ATEMMethods.CopyDirectory(CommonData.ExeDir + '\\' + id + "\\kshootmania\\se", CommonData.SkinDir + "\\Default skin\\se", true);
 
-            Directory.Delete(CommonData.ExeDir + "\\" + id.ToString(), true);
+            Directory.Delete(CommonData.ExeDir + "\\" + id, true);
             #endregion
 
             #region Insert shortcut into startup folder

@@ -142,27 +142,16 @@ namespace KShootMania_Skin_Manager
             #region Repopulate directories
             for (int i = 0; i < loaded_skins.Count; i++)
             {
-                CopyDirectoryContents(CommonData.SkinDir + '\\' + loaded_skins[i] + "\\imgs", CommonData.KSMDir + "\\imgs");
-                CopyDirectoryContents(CommonData.SkinDir + '\\' + loaded_skins[i] + "\\se", CommonData.KSMDir + "\\se");
+                string imgdir = CommonData.SkinDir + '\\' + loaded_skins[i] + "\\imgs";
+                if (Directory.Exists(imgdir))
+                    ATEMMethods.CopyDirectory(imgdir, CommonData.KSMDir + "\\imgs", ATEMMethods.FolderExistsResponse.MergeOverwrite, true);
+
+                string sedir = CommonData.SkinDir + '\\' + loaded_skins[i] + "\\se";
+                if (Directory.Exists(sedir))
+                    ATEMMethods.CopyDirectory(sedir, CommonData.KSMDir + "\\se", ATEMMethods.FolderExistsResponse.MergeOverwrite, true);
             }
             #endregion
             Close();
-        }
-
-        private void CopyDirectoryContents(string fromdir, string todir)
-        {
-            foreach (string file in Directory.GetFiles(fromdir))
-            {
-                string filename = file.Substring(fromdir.Length);
-                File.Copy(file, todir + filename, true);
-            }
-
-            foreach (string directory in Directory.GetDirectories(fromdir))
-            {
-                string dirname = directory.Substring(fromdir.Length);
-                Directory.CreateDirectory(todir + dirname);
-                CopyDirectoryContents(directory, todir + dirname);
-            }
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
