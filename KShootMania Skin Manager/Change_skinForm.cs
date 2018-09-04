@@ -112,20 +112,56 @@ namespace KShootMania_Skin_Manager
 
             Redraw_ListBoxes();
             if (top_priority_on_top)
-            {
                 index--;
-            }
             else
-            {
                 index++;
-            }
+            Loaded_skinsListBox.SelectedIndex = index;
+        }
+
+        private void Down_priorityButton_Click(object sender, EventArgs e)
+        {
+            int index = Loaded_skinsListBox.SelectedIndex;
+            if (top_priority_on_top)
+                index = loaded_skins.Count - 1 - index;
+            string skin = loaded_skins[index];
+            loaded_skins.RemoveAt(index);
+            loaded_skins.Insert(index - 1, skin);
+            index = Loaded_skinsListBox.SelectedIndex;
+
+            Redraw_ListBoxes();
+            if (top_priority_on_top)
+                index++;
+            else
+                index--;
             Loaded_skinsListBox.SelectedIndex = index;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             CommonData.Save_skins_xml(loaded_skins);
-            Load_Skin();
+            Skin_result checksum = new Skin_result(loaded_skins.ToArray());
+            switch (checksum.result)
+            {
+                case Skin_result.CheckResult.Good:
+                    {
+                        Load_Skin();
+                        break;
+                    }
+                case Skin_result.CheckResult.Error:
+                    {
+                        if (checksum.errors.Contains(Skin_result.SkinErrors.Missing_elements))
+                            MessageBox.Show("This skin setup is missing certain elements. Consider adding the default skin to the bottom of the skin heirarchy to cover any missing elements.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                case Skin_result.CheckResult.Warning:
+                    {
+                        if (checksum.warnings.Contains(Skin_result.SkinWarnings.Unneeded_skins))
+                            MessageBox.Show("This skin setup includes skins that go unused. The skin will stil work, but will load slower than if these skins were removed.", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (MessageBox.Show("Load the skin anyway?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            Load_Skin();
+                        break;
+                    }
+            }
         }
 
         private void Load_Skin()

@@ -131,6 +131,7 @@
             this.Down_priorityButton.TabIndex = 6;
             this.Down_priorityButton.Text = "Decrease higherarchy";
             this.Down_priorityButton.UseVisualStyleBackColor = true;
+            this.Down_priorityButton.Click += new System.EventHandler(this.Down_priorityButton_Click);
             // 
             // SaveButton
             // 
