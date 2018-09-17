@@ -36,6 +36,28 @@ namespace KShootMania_Skin_Manager
 
             InitializeComponent();
             Redraw_ListBoxes();
+            Change_skinForm_SizeChanged(null, null);
+        }
+
+        private void Change_skinForm_SizeChanged(object sender, EventArgs e)
+        {
+            int size = Width - 40; // Removing window padding
+            Skin_libraryListBox.Size = new Size(size / 8 * 3 - 3, Height - 82);
+            int button_width = size / 8 * 2 - 6;
+            int button_x = Skin_libraryListBox.Location.X + Skin_libraryListBox.Width + 6;
+            Loaded_skinsListBox.Size = new Size(size / 8 * 3 - 3 + size % 8, Height - 82);
+            Loaded_skinsListBox.Location = new Point(button_x + button_width + 6, Loaded_skinsListBox.Location.Y);
+
+            #region Apply to buttons
+            foreach (Control control in Controls)
+            {
+                if (control.GetType() == typeof(Button))
+                {
+                    control.Width = button_width;
+                    control.Location = new Point(button_x, control.Location.Y);
+                }
+            }
+            #endregion
         }
 
         private void Redraw_ListBoxes()

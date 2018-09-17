@@ -73,7 +73,7 @@
             // Loaded_skinsListBox
             // 
             this.Loaded_skinsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Loaded_skinsListBox.FormattingEnabled = true;
             this.Loaded_skinsListBox.Location = new System.Drawing.Point(481, 25);
             this.Loaded_skinsListBox.Name = "Loaded_skinsListBox";
@@ -83,8 +83,6 @@
             // 
             // Add_skinButton
             // 
-            this.Add_skinButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Add_skinButton.Enabled = false;
             this.Add_skinButton.Location = new System.Drawing.Point(325, 54);
             this.Add_skinButton.Name = "Add_skinButton";
@@ -96,8 +94,6 @@
             // 
             // Remove_skinButton
             // 
-            this.Remove_skinButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Remove_skinButton.Enabled = false;
             this.Remove_skinButton.Location = new System.Drawing.Point(325, 83);
             this.Remove_skinButton.Name = "Remove_skinButton";
@@ -109,8 +105,6 @@
             // 
             // Up_priorityButton
             // 
-            this.Up_priorityButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Up_priorityButton.Enabled = false;
             this.Up_priorityButton.Location = new System.Drawing.Point(325, 112);
             this.Up_priorityButton.Name = "Up_priorityButton";
@@ -122,8 +116,6 @@
             // 
             // Down_priorityButton
             // 
-            this.Down_priorityButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Down_priorityButton.Enabled = false;
             this.Down_priorityButton.Location = new System.Drawing.Point(325, 141);
             this.Down_priorityButton.Name = "Down_priorityButton";
@@ -135,8 +127,6 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveButton.Location = new System.Drawing.Point(325, 170);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(150, 23);
@@ -170,8 +160,10 @@
             this.Controls.Add(this.Skin_libraryListBox);
             this.Controls.Add(this.Loaded_skinsLabel);
             this.Controls.Add(this.Skin_libraryLabel);
+            this.MinimumSize = new System.Drawing.Size(440, 240);
             this.Name = "Change_skinForm";
             this.Text = "KShootMania Skin Manager";
+            this.SizeChanged += new System.EventHandler(this.Change_skinForm_SizeChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
