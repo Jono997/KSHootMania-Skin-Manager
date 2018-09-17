@@ -23,16 +23,15 @@ namespace KShootMania_Skin_Manager
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            Rectangle resolution = Screen.PrimaryScreen.Bounds;
-            Location = new Point(resolution.Width - Width, 0);
+            Update_Position();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (!Program.KSMRunning() && closeable)
-            {
                 Close();
-            }
+            else
+                Update_Position();
         }
 
         private void Change_skinButton_Click(object sender, EventArgs e)
@@ -48,6 +47,12 @@ namespace KShootMania_Skin_Manager
             Process.Start(CommonData.KSMDir + "\\kshootmania.exe");
             closeable = true;
             Visible = true;
+        }
+
+        private void Update_Position()
+        {
+            Rectangle resolution = Screen.PrimaryScreen.Bounds;
+            Location = new Point(resolution.Width - Width, 0);
         }
     }
 }
