@@ -21,9 +21,6 @@ namespace KShootMania_Skin_Manager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Change_skinForm());
-            return;
-
             if (!Directory.Exists(CommonData.SkinDir))
             {
                 SetupForm setup = new SetupForm();

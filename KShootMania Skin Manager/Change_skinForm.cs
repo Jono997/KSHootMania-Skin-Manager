@@ -32,6 +32,7 @@ namespace KShootMania_Skin_Manager
                 unloaded_skins.Remove(skin);
             }
             #endregion
+
             top_priority_on_top = CommonData.TopPriorityOnTop;
 
             InitializeComponent();
@@ -41,11 +42,21 @@ namespace KShootMania_Skin_Manager
 
         private void Change_skinForm_SizeChanged(object sender, EventArgs e)
         {
-            int size = Width - 40; // Removing window padding
-            Skin_libraryListBox.Size = new Size(size / 8 * 3 - 3, Height - 82);
-            int button_width = size / 8 * 2 - 6;
+            #region create base
+            int base_size = Width - 40; // Removing window padding
+            int overflow = base_size % 8;
+            base_size = (base_size - overflow) / 8;
+
+            #region create overflow
+            int overflow2 = overflow % 3;
+            overflow = (overflow - overflow2) / 3;
+            #endregion
+            #endregion
+
+            Skin_libraryListBox.Size = new Size(base_size * 3 + overflow - 3, Height - 82);
+            int button_width = base_size * 2 + overflow - 6;
             int button_x = Skin_libraryListBox.Location.X + Skin_libraryListBox.Width + 6;
-            Loaded_skinsListBox.Size = new Size(size / 8 * 3 - 3 + size % 8, Height - 82);
+            Loaded_skinsListBox.Size = new Size(base_size * 3 + overflow + overflow2 - 3 + overflow, Height - 82);
             Loaded_skinsListBox.Location = new Point(button_x + button_width + 6, Loaded_skinsListBox.Location.Y);
 
             #region Apply to buttons
