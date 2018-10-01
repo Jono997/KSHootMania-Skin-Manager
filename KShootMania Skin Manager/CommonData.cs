@@ -36,7 +36,23 @@ namespace KShootMania_Skin_Manager
         /// <summary>
         /// If true, the higher priority skins will appear at the top of the skin order rather than at the bottom.
         /// </summary>
-        public static bool TopPriorityOnTop { get; set; }
+        public static bool TopPriorityOnTop { get; set; } = true;
+
+        /// <summary>
+        /// The position of the change skin button
+        /// </summary>
+        public static ButtonPosition ChangeSkinButtonPosition { get; set; } = ButtonPosition.TopRight;
+
+        /// <summary>
+        /// The position of the change skin button
+        /// </summary>
+        public enum ButtonPosition
+        {
+            TopLeft = 0,
+            TopRight = 1,
+            BottomLeft = 2,
+            BottomRight = 3
+        }
 
         public static void Setup()
         {
@@ -51,7 +67,8 @@ namespace KShootMania_Skin_Manager
         {
             string[] settings = new string[] { "[KSMSkinManager]",
                                                "KSMDir=" + KSMDir,
-                                               "TopPriorityOnTop=" + (TopPriorityOnTop ? "true" : "false")
+                                               "TopPriorityOnTop=" + (TopPriorityOnTop ? "true" : "false"),
+                                               "ChangeSkinButtonPosition=" + ((int)ChangeSkinButtonPosition).ToString()
             };
             File.WriteAllLines(SettingsPath, settings);
         }
@@ -96,6 +113,8 @@ namespace KShootMania_Skin_Manager
                         KSMDir = setting_split[1]; break;
                     case "TopPriorityOnTop":
                         TopPriorityOnTop = (setting_split[1] == "true" ? true : false); break;
+                    case "ChangeSkinButtonPosition":
+                        ChangeSkinButtonPosition = (ButtonPosition)Convert.ToInt32(setting_split[1]); break;
                 }
             }
         }
