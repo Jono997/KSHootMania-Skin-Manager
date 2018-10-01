@@ -7,6 +7,7 @@ using ATEM;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using System.IO.Compression;
 
 namespace KShootMania_Skin_Manager
 {
@@ -130,6 +131,56 @@ namespace KShootMania_Skin_Manager
             {
                 return new string[] { "Default skin" }.ToList();
             }
+        }
+
+        public static void Install_Skin(string zip)
+        {
+            #region Create unique id
+            Random randint = new Random();
+            string id = randint.Next(9999).ToString();
+            while (Directory.Exists(ExeDir + '\\' + id))
+            {
+                id = randint.Next(9999).ToString();
+            }
+            #endregion
+
+            string skindir = ExeDir + '\\' + id;
+            ZipFile.ExtractToDirectory(zip, skindir);
+
+            string[] subdirs;
+            while (true)
+            {
+                subdirs = Directory.GetDirectories(skindir);
+                if (subdirs.Contains(skindir + "\\imgs") || subdirs.Contains(skindir + "\\se"))
+                {
+                    break;
+                }
+                else if (subdirs.Length == 0)
+                {
+                    MessageBox.Show("ERROR: The skin within the zip file could not be found.", "ERROR");
+                    return;
+                }
+                else
+                {
+                    skindir = subdirs[0];
+                }
+            }
+
+            string skinname = skindir.Split('\\').GetFromLast(0);
+            if (File.Exists(SkinDir + '\\' + skinname))
+            {
+                if (MessageBox.Show("ERROR: The skin you're trying to install is already installed. Overwrite?", "ERROR", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Directory.Delete(SkinDir + '\\' + skinname, true);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            ATEMMethods.CopyDirectory(skindir, SkinDir + '\\' + skinname, true);
+
+            Directory.Delete(ExeDir + "\\" + id, true);
         }
     }
 }

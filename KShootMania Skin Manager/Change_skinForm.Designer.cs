@@ -38,6 +38,7 @@
             this.Down_priorityButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
+            this.Organise_skinsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Skin_libraryLabel
@@ -127,10 +128,10 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(325, 170);
+            this.SaveButton.Location = new System.Drawing.Point(325, 199);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(150, 23);
-            this.SaveButton.TabIndex = 7;
+            this.SaveButton.TabIndex = 8;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -145,11 +146,22 @@
             this.helpButton.UseVisualStyleBackColor = true;
             this.helpButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
+            // Organise_skinsButton
+            // 
+            this.Organise_skinsButton.Location = new System.Drawing.Point(325, 170);
+            this.Organise_skinsButton.Name = "Organise_skinsButton";
+            this.Organise_skinsButton.Size = new System.Drawing.Size(150, 23);
+            this.Organise_skinsButton.TabIndex = 7;
+            this.Organise_skinsButton.Text = "Organise skins";
+            this.Organise_skinsButton.UseVisualStyleBackColor = true;
+            this.Organise_skinsButton.Click += new System.EventHandler(this.Organise_skinsButton_Click);
+            // 
             // Change_skinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Organise_skinsButton);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.Down_priorityButton);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Button Down_priorityButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Button Organise_skinsButton;
     }
 }

@@ -20,18 +20,7 @@ namespace KShootMania_Skin_Manager
         bool top_priority_on_top;
         public Change_skinForm()
         {
-            #region Load skins
-            unloaded_skins = new List<string>();
-            foreach (string skin in Directory.GetDirectories(CommonData.SkinDir))
-            {
-                unloaded_skins.Add(skin.Substring(CommonData.SkinDir.Length + 1));
-            }
-            loaded_skins = CommonData.Load_skins_xml();
-            foreach (string skin in loaded_skins)
-            {
-                unloaded_skins.Remove(skin);
-            }
-            #endregion
+            Load_Skins();
 
             top_priority_on_top = CommonData.TopPriorityOnTop;
 
@@ -69,6 +58,20 @@ namespace KShootMania_Skin_Manager
                 }
             }
             #endregion
+        }
+
+        private void Load_Skins()
+        {
+            unloaded_skins = new List<string>();
+            foreach (string skin in Directory.GetDirectories(CommonData.SkinDir))
+            {
+                unloaded_skins.Add(skin.Substring(CommonData.SkinDir.Length + 1));
+            }
+            loaded_skins = CommonData.Load_skins_xml();
+            foreach (string skin in loaded_skins)
+            {
+                unloaded_skins.Remove(skin);
+            }
         }
 
         private void Redraw_ListBoxes()
@@ -227,6 +230,14 @@ namespace KShootMania_Skin_Manager
         {
             HelpForm help = new HelpForm();
             help.ShowDialog();
+        }
+
+        private void Organise_skinsButton_Click(object sender, EventArgs e)
+        {
+            Manage_skinsForm manage_SkinsForm = new Manage_skinsForm();
+            manage_SkinsForm.ShowDialog();
+            Load_Skins();
+            Redraw_ListBoxes();
         }
     }
 }
