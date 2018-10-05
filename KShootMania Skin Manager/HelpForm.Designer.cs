@@ -28,26 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("What is KShootMania?");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("What is KShootMania Skin Manager", new System.Windows.Forms.TreeNode[] {
-            treeNode34});
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Installation");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Skin hierarchy");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Installing additional skins");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("How to use KShootMania Skin Manager", new System.Windows.Forms.TreeNode[] {
-            treeNode36,
-            treeNode37,
-            treeNode38});
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("General", new System.Windows.Forms.TreeNode[] {
-            treeNode35,
-            treeNode39});
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Moving KShootMania after installation");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Moving KShootMania Skin Manager after installation");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Uninstalling KShootMania Skin Manager");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("System", new System.Windows.Forms.TreeNode[] {
-            treeNode41,
-            treeNode42,
-            treeNode43});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("What is KShootMania?");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("What is KShootMania Skin Manager", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Installation");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Skin hierarchy");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Installing additional skins");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Settings.ini breakdown");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Settings", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("How to use KShootMania Skin Manager", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("General", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Moving KShootMania after installation");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Moving KShootMania Skin Manager after installation");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Uninstalling KShootMania Skin Manager");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("System", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11,
+            treeNode12});
             this.TopicsTreeView = new System.Windows.Forms.TreeView();
             this.TopicLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
@@ -58,31 +62,35 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.TopicsTreeView.Location = new System.Drawing.Point(12, 12);
             this.TopicsTreeView.Name = "TopicsTreeView";
-            treeNode34.Name = "What is KShootMania?";
-            treeNode34.Text = "What is KShootMania?";
-            treeNode35.Name = "What is KShootMania Skin Manager";
-            treeNode35.Text = "What is KShootMania Skin Manager";
-            treeNode36.Name = "Installation";
-            treeNode36.Text = "Installation";
-            treeNode37.Name = "Skin hierarchy";
-            treeNode37.Text = "Skin hierarchy";
-            treeNode38.Name = "Installing additional skins";
-            treeNode38.Text = "Installing additional skins";
-            treeNode39.Name = "How to use KShootMania Skin Manager";
-            treeNode39.Text = "How to use KShootMania Skin Manager";
-            treeNode40.Name = "General";
-            treeNode40.Text = "General";
-            treeNode41.Name = "Moving KShootMania after installation";
-            treeNode41.Text = "Moving KShootMania after installation";
-            treeNode42.Name = "Moving KShootMania Skin Manager after installation";
-            treeNode42.Text = "Moving KShootMania Skin Manager after installation";
-            treeNode43.Name = "Uninstalling KShootMania Skin Manager";
-            treeNode43.Text = "Uninstalling KShootMania Skin Manager";
-            treeNode44.Name = "System";
-            treeNode44.Text = "System";
+            treeNode1.Name = "What is KShootMania?";
+            treeNode1.Text = "What is KShootMania?";
+            treeNode2.Name = "What is KShootMania Skin Manager";
+            treeNode2.Text = "What is KShootMania Skin Manager";
+            treeNode3.Name = "Installation";
+            treeNode3.Text = "Installation";
+            treeNode4.Name = "Skin hierarchy";
+            treeNode4.Text = "Skin hierarchy";
+            treeNode5.Name = "Installing additional skins";
+            treeNode5.Text = "Installing additional skins";
+            treeNode6.Name = "Settings.ini breakdown";
+            treeNode6.Text = "Settings.ini breakdown";
+            treeNode7.Name = "Settings";
+            treeNode7.Text = "Settings";
+            treeNode8.Name = "How to use KShootMania Skin Manager";
+            treeNode8.Text = "How to use KShootMania Skin Manager";
+            treeNode9.Name = "General";
+            treeNode9.Text = "General";
+            treeNode10.Name = "Moving KShootMania after installation";
+            treeNode10.Text = "Moving KShootMania after installation";
+            treeNode11.Name = "Moving KShootMania Skin Manager after installation";
+            treeNode11.Text = "Moving KShootMania Skin Manager after installation";
+            treeNode12.Name = "Uninstalling KShootMania Skin Manager";
+            treeNode12.Text = "Uninstalling KShootMania Skin Manager";
+            treeNode13.Name = "System";
+            treeNode13.Text = "System";
             this.TopicsTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode40,
-            treeNode44});
+            treeNode9,
+            treeNode13});
             this.TopicsTreeView.Size = new System.Drawing.Size(299, 426);
             this.TopicsTreeView.TabIndex = 0;
             this.TopicsTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TopicsTreeView_AfterSelect);

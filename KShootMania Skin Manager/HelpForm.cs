@@ -72,15 +72,26 @@ namespace KShootMania_Skin_Manager
                 "Copy the skins folder and settings.ini file from the backup into the new installation of KShootMania Skin Manager.\n" +
                 "Now, restart your computer and KShootMania Skin Manager should now work from within the new directory.\n" +
                 "\n" +
-                "METHDO 2:\n" +
+                "METHOD 2:\n" +
                 "First, right click your taskbar or press CTRL + ALT + Delete and select \"Task Manager\". From there, find the process named \"KShootMania Skin Manager (32 bit)\", right click it and select \"End task\".\n" +
                 @"Afterwards, if you installed KShootMania Skin Manager for your specific account, go to ""C:\Users\" + Environment.UserName + @"\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"", or if you installed to all users, ""C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"". Within the folder, you will find a shortcut to KShootMania Skin Manager. Delete it, but leave the window open for later." + "\n" +
                 "After that, move the KShootMania Skin Manager folder, right click \"KShootMania Skin Manager.exe\", mouse down to \"Send to\" and select \"Desktop (create shortcut)\".\n" +
                 "Finally, copy the shortcut into the folder you left open and restart your computer. KShootMania Skin Manager should now work from within the new directory.",
 
                 "Installing additional skins",
-                "To install more skins to KShootMania Skim Manager, go to where you installed KShootMania Skin manager and extract the skin to the skins folder.\n" +
-                "Keep in mind that the skin's file structure needs to be organised a certain way. See the default skin KShootMania Skin Manager generates for reference."
+                "To install more skins to KShootMania Skin Manager, go to where you installed KShootMania Skin manager and extract the skin to the skins folder.\n" +
+                "Keep in mind that the skin's file structure needs to be organised a certain way. See the default skin KShootMania Skin Manager generates for reference.",
+
+                "Settings",
+                "There are some settings in KShootMania Skin Manager that you can alter. There are two ways you can do this.\n" + 
+                "The standard way to edit settings is to open up the change skin window and click the settings button. From there, you can edit a good number of the settings in this window, but it's not guaranteed that you'll be able to edit every setting from within the settings window.\n" + 
+                "The other way is to edit the settings.ini file directly. To edit it, go into KShootMania Skin Manager's directory and open the settings.ini file. In there, you can change all of the settings that KShootMania allows you to change.",
+
+                "Settings.ini breakdown",
+                "A breakdown of each setting of the settings.ini file\n" +
+                "KSMDir: The location of where the user has KShootMania. Don't change this outside of moving KShootMania. See \"Moving KShootMania after installation\" for how to do that.\n" +
+                "TopPriorityOnTop: The way skins in the current skin configuration are organised in the change skin window. If this is \"true\", skins higher in the hierarchy will appear higher in the list. If this is \"false\", skins lower in the hierarchy will appear higher in the list.\n" +
+                "ChangeSkinButtonPosition: The corner the change skin button will appear in when KShootMania is running. 0: Top-left corner. 1: Top-right corner. 2: Bottom-left corner. 3: Bottom-right corner."
             #endregion
                 );
             InitializeComponent();

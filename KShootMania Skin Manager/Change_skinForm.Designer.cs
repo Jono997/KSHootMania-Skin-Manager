@@ -39,6 +39,7 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.Organise_skinsButton = new System.Windows.Forms.Button();
+            this.SettingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Skin_libraryLabel
@@ -128,10 +129,10 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(325, 199);
+            this.SaveButton.Location = new System.Drawing.Point(325, 228);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(150, 23);
-            this.SaveButton.TabIndex = 8;
+            this.SaveButton.TabIndex = 9;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -156,11 +157,22 @@
             this.Organise_skinsButton.UseVisualStyleBackColor = true;
             this.Organise_skinsButton.Click += new System.EventHandler(this.Organise_skinsButton_Click);
             // 
+            // SettingsButton
+            // 
+            this.SettingsButton.Location = new System.Drawing.Point(325, 199);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(150, 23);
+            this.SettingsButton.TabIndex = 8;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.UseVisualStyleBackColor = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
             // Change_skinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.Organise_skinsButton);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.SaveButton);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button Organise_skinsButton;
+        private System.Windows.Forms.Button SettingsButton;
     }
 }

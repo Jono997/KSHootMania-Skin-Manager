@@ -17,12 +17,9 @@ namespace KShootMania_Skin_Manager
     {
         List<string> unloaded_skins;
         List<string> loaded_skins;
-        bool top_priority_on_top;
         public Change_skinForm()
         {
             Load_Skins();
-
-            top_priority_on_top = CommonData.TopPriorityOnTop;
 
             InitializeComponent();
             Redraw_ListBoxes();
@@ -82,7 +79,7 @@ namespace KShootMania_Skin_Manager
             Loaded_skinsListBox.Items.Clear();
             for (int i = 0; i < loaded_skins.Count; i++)
             {
-                if (top_priority_on_top)
+                if (CommonData.TopPriorityOnTop)
                 {
                     Loaded_skinsListBox.Items.Add(loaded_skins.GetFromLast(i));
                 }
@@ -107,8 +104,8 @@ namespace KShootMania_Skin_Manager
             else
             {
                 Remove_skinButton.Enabled = true;
-                Up_priorityButton.Enabled = Loaded_skinsListBox.SelectedIndex != (top_priority_on_top ? 0 : loaded_skins.Count - 1);
-                Down_priorityButton.Enabled = Loaded_skinsListBox.SelectedIndex != (top_priority_on_top ? loaded_skins.Count - 1 : 0);
+                Up_priorityButton.Enabled = Loaded_skinsListBox.SelectedIndex != (CommonData.TopPriorityOnTop ? 0 : loaded_skins.Count - 1);
+                Down_priorityButton.Enabled = Loaded_skinsListBox.SelectedIndex != (CommonData.TopPriorityOnTop ? loaded_skins.Count - 1 : 0);
             }
         }
 
@@ -139,7 +136,7 @@ namespace KShootMania_Skin_Manager
         private void Up_priorityButton_Click(object sender, EventArgs e)
         {
             int index = Loaded_skinsListBox.SelectedIndex;
-            if (top_priority_on_top)
+            if (CommonData.TopPriorityOnTop)
                 index = loaded_skins.Count - 1 - index;
             string skin = loaded_skins[index];
             loaded_skins.RemoveAt(index);
@@ -147,7 +144,7 @@ namespace KShootMania_Skin_Manager
             index = Loaded_skinsListBox.SelectedIndex;
 
             Redraw_ListBoxes();
-            if (top_priority_on_top)
+            if (CommonData.TopPriorityOnTop)
                 index--;
             else
                 index++;
@@ -157,7 +154,7 @@ namespace KShootMania_Skin_Manager
         private void Down_priorityButton_Click(object sender, EventArgs e)
         {
             int index = Loaded_skinsListBox.SelectedIndex;
-            if (top_priority_on_top)
+            if (CommonData.TopPriorityOnTop)
                 index = loaded_skins.Count - 1 - index;
             string skin = loaded_skins[index];
             loaded_skins.RemoveAt(index);
@@ -165,7 +162,7 @@ namespace KShootMania_Skin_Manager
             index = Loaded_skinsListBox.SelectedIndex;
 
             Redraw_ListBoxes();
-            if (top_priority_on_top)
+            if (CommonData.TopPriorityOnTop)
                 index++;
             else
                 index--;
@@ -237,6 +234,13 @@ namespace KShootMania_Skin_Manager
             Manage_skinsForm manage_SkinsForm = new Manage_skinsForm();
             manage_SkinsForm.ShowDialog();
             Load_Skins();
+            Redraw_ListBoxes();
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.ShowDialog();
             Redraw_ListBoxes();
         }
     }
