@@ -12,16 +12,26 @@ using System.Diagnostics;
 
 namespace KShootMania_Skin_Manager
 {
+    /// <summary>
+    /// A form that displays help information for the user to read
+    /// </summary>
     public partial class HelpForm : Form
     {
+        /// <summary>
+        /// The help topics that can be read by the user
+        /// </summary>
         private static Dictionary<string, string> topics;
+
+        /// <summary>
+        /// The destination of the link on the current help page
+        /// </summary>
         private static string link;
 
         public HelpForm()
         {
             topics = new Dictionary<string, string>();
             topics.AddRange(
-            #region Topics
+                #region Topics
                 "What is KShootMania?",
                 "KShootMania is a rhythm game that consists of notes along numerous lanes of a track that the player must hit when they reach the bottom of the track.\n" +
                 "There are four lanes which white (BT) object travel down. Orange (FX) objects also travel down either the two lefthand or two righthand lanes and cause a distortion to the song when successfully hit.\n" +
@@ -92,11 +102,14 @@ namespace KShootMania_Skin_Manager
                 "KSMDir: The location of where the user has KShootMania. Don't change this outside of moving KShootMania. See \"Moving KShootMania after installation\" for how to do that.\n" +
                 "TopPriorityOnTop: The way skins in the current skin configuration are organised in the change skin window. If this is \"true\", skins higher in the hierarchy will appear higher in the list. If this is \"false\", skins lower in the hierarchy will appear higher in the list.\n" +
                 "ChangeSkinButtonPosition: The corner the change skin button will appear in when KShootMania is running. 0: Top-left corner. 1: Top-right corner. 2: Bottom-left corner. 3: Bottom-right corner."
-            #endregion
+                #endregion
                 );
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Display the help page and set the link to the link specified in the help page
+        /// </summary>
         private void TopicsTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (topics.ContainsKey(e.Node.Name))
@@ -124,6 +137,9 @@ namespace KShootMania_Skin_Manager
             }
         }
 
+        /// <summary>
+        /// Open the link in the help page
+        /// </summary>
         private void TopicLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(link);

@@ -11,8 +11,14 @@ using System.Diagnostics;
 
 namespace KShootMania_Skin_Manager
 {
+    /// <summary>
+    /// The form that displays the Change skin button
+    /// </summary>
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// If true, this form will close when no instances of KShootMania are running
+        /// </summary>
         static bool closeable;
 
         public MainForm()
@@ -21,11 +27,17 @@ namespace KShootMania_Skin_Manager
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Calls Update_Position when the form opens
+        /// </summary>
         private void MainForm_Shown(object sender, EventArgs e)
         {
             Update_Position();
         }
 
+        /// <summary>
+        /// Update the location of Change_skinButton
+        /// </summary>
         private void Update_Position()
         {
             Rectangle resolution = Screen.PrimaryScreen.Bounds;
@@ -46,6 +58,10 @@ namespace KShootMania_Skin_Manager
             }
         }
 
+        /// <summary>
+        /// If an instance of KShootMania is running or closeable is false, call Update_Position
+        /// Otherwise, close the form
+        /// </summary>
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (!Program.KSMRunning() && closeable)
@@ -54,6 +70,9 @@ namespace KShootMania_Skin_Manager
                 Update_Position();
         }
 
+        /// <summary>
+        /// Disable autoclosing, close all instances of KShootMania, open Change_SkinForm and open a new instance of KShootMania after Change_SkinForm closes
+        /// </summary>
         private void Change_skinButton_Click(object sender, EventArgs e)
         {
             Visible = false;

@@ -20,6 +20,9 @@ namespace KShootMania_Skin_Manager
         public int unnecessary_skins { get; private set; }
 
         #region result
+        /// <summary>
+        /// The three results of a check of the current skin
+        /// </summary>
         public enum CheckResult
         {
             /// <summary>
@@ -36,24 +39,45 @@ namespace KShootMania_Skin_Manager
             Error
         }
 
+        /// <summary>
+        /// The result of the skin check
+        /// </summary>
         public CheckResult result { get; private set; }
         #endregion
 
         #region errors
+        /// <summary>
+        /// The various errors the skin can have
+        /// </summary>
         public enum SkinErrors
         {
-            Missing_elements
+            /// <summary>
+            /// The skin is missing elements
+            /// </summary>
+            Missing_elements = 0
         }
 
+        /// <summary>
+        /// The errors in the skin
+        /// </summary>
         public SkinErrors[] errors { get; private set; }
         #endregion
 
         #region warnings
+        /// <summary>
+        /// The various warnings a skin can have
+        /// </summary>
         public enum SkinWarnings
         {
-            Unneeded_skins
+            /// <summary>
+            /// The skin has some skins that don't need to be used
+            /// </summary>
+            Unneeded_skins = 0
         }
 
+        /// <summary>
+        /// The warnings the skin has
+        /// </summary>
         public SkinWarnings[] warnings { get; private set; }
         #endregion
 
@@ -63,7 +87,7 @@ namespace KShootMania_Skin_Manager
             List<SkinWarnings> _warnings = new List<SkinWarnings>();
 
             #region Missing skin elements & Unnecessary skins
-            List<string> missing = Directory.GetFiles(CommonData.SkinDir + "\\Default skin", "*", SearchOption.AllDirectories).ToList();
+            List<string> missing = Directory.GetFiles(CommonData.SkinDir + '\\' + CommonData.DefaultSkinName, "*", SearchOption.AllDirectories).ToList();
             int unnecessary = -1;
 
             for (int i = skin_setup.Length - 1; i >= 0; i--)

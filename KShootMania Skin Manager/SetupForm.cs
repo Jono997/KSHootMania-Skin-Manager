@@ -14,6 +14,9 @@ using ATEM;
 
 namespace KShootMania_Skin_Manager
 {
+    /// <summary>
+    /// The form where users install KShootMania Skin Manager
+    /// </summary>
     public partial class SetupForm : Form
     {
         public SetupForm()
@@ -22,6 +25,9 @@ namespace KShootMania_Skin_Manager
             KSM_install_locationFolderBrowserDialog.SelectedPath = CommonData.ExeDir;
         }
 
+        /// <summary>
+        /// Open the folder select window to choose where KShootMania is installed
+        /// </summary>
         private void KSM_install_locationButton_Click(object sender, EventArgs e)
         {
             if (KSM_install_locationFolderBrowserDialog.ShowDialog() == DialogResult.OK)
@@ -31,6 +37,9 @@ namespace KShootMania_Skin_Manager
             }
         }
 
+        /// <summary>
+        /// Open the file select window to select the KShootMania zip file
+        /// </summary>
         private void Zip_fileButton_Click(object sender, EventArgs e)
         {
             if (Zip_fileOpenFileDialog.ShowDialog() == DialogResult.OK)
@@ -38,7 +47,10 @@ namespace KShootMania_Skin_Manager
                 Zip_fileTextBox.Text = Zip_fileOpenFileDialog.FileName;
             }
         }
-
+        
+        /// <summary>
+        /// Check if KShootMania Skin Manager is being run as administrator and uncheck Install_for_allCheckBox and lecture the user if not.
+        /// </summary>
         private void Install_for_allCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (Install_for_allCheckBox.Checked)
@@ -52,6 +64,9 @@ namespace KShootMania_Skin_Manager
             }
          }
 
+        /// <summary>
+        /// Install KShootMania Skin Manager
+        /// </summary>
         private void Begin_setupButton_Click(object sender, EventArgs e)
         {
             Directory.CreateDirectory(CommonData.SkinDir);
@@ -70,8 +85,8 @@ namespace KShootMania_Skin_Manager
 
             ZipFile.ExtractToDirectory(Zip_fileTextBox.Text, CommonData.ExeDir + '\\' + id);
 
-            ATEMMethods.CopyDirectory(CommonData.ExeDir + "\\" + id + "\\kshootmania\\imgs", CommonData.SkinDir + "\\Default skin\\imgs", true);
-            ATEMMethods.CopyDirectory(CommonData.ExeDir + '\\' + id + "\\kshootmania\\se", CommonData.SkinDir + "\\Default skin\\se", true);
+            ATEMMethods.CopyDirectory(CommonData.ExeDir + "\\" + id + "\\kshootmania\\imgs", CommonData.SkinDir + '\\' + CommonData.DefaultSkinName + "\\imgs", true);
+            ATEMMethods.CopyDirectory(CommonData.ExeDir + '\\' + id + "\\kshootmania\\se", CommonData.SkinDir + '\\' + CommonData.DefaultSkinName + "\\se", true);
 
             Directory.Delete(CommonData.ExeDir + "\\" + id, true);
             #endregion

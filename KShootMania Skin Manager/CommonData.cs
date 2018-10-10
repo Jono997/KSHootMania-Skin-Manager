@@ -11,6 +11,9 @@ using System.IO.Compression;
 
 namespace KShootMania_Skin_Manager
 {
+    /// <summary>
+    /// A collection of information used globally among the application
+    /// </summary>
     static class CommonData
     {
         /// <summary>
@@ -34,6 +37,11 @@ namespace KShootMania_Skin_Manager
         public static string KSMDir { get; set; }
 
         /// <summary>
+        /// The name of the default skin
+        /// </summary>
+        public static string DefaultSkinName { get; private set; }
+
+        /// <summary>
         /// If true, the higher priority skins will appear at the top of the skin order rather than at the bottom.
         /// </summary>
         public static bool TopPriorityOnTop { get; set; } = true;
@@ -54,6 +62,9 @@ namespace KShootMania_Skin_Manager
             BottomRight = 3
         }
 
+        /// <summary>
+        /// Initialises variables
+        /// </summary>
         public static void Setup()
         {
             string[] directory_split = Environment.GetCommandLineArgs()[0].Split('\\');
@@ -61,8 +72,12 @@ namespace KShootMania_Skin_Manager
             ExeDir = directory_split.Stitch('\\');
             SettingsPath = ExeDir + "\\settings.ini";
             SkinDir = ExeDir + "\\Skins";
+            DefaultSkinName = "Default skin";
         }
 
+        /// <summary>
+        /// Saves the user's settings to settings.ini
+        /// </summary>
         public static void Save()
         {
             string[] settings = new string[] { "[KSMSkinManager]",
@@ -73,6 +88,9 @@ namespace KShootMania_Skin_Manager
             File.WriteAllLines(SettingsPath, settings);
         }
 
+        /// <summary>
+        /// Loads the user's settings from settings.ini
+        /// </summary>
         public static void Load()
         {
             string[] settings = File.ReadAllLines(SettingsPath);
@@ -119,6 +137,10 @@ namespace KShootMania_Skin_Manager
             }
         }
 
+        /// <summary>
+        /// Get a list of all the running instances of KShootMania, including copies that aren't the installed version
+        /// </summary>
+        /// <returns></returns>
         public static System.Diagnostics.Process[] KSM_processes()
         {
             System.Diagnostics.Process[] result = System.Diagnostics.Process.GetProcessesByName("kshootmania");
@@ -126,6 +148,10 @@ namespace KShootMania_Skin_Manager
             return result;
         }
 
+        /// <summary>
+        /// Saves the skin setup to skin.xml
+        /// </summary>
+        /// <param name="skins_xml">The skin setup to save</param>
         public static void Save_skins_xml(List<string> skins_xml)
         {
             using (var writer = new StreamWriter(ExeDir + "\\Skin.xml"))
@@ -136,6 +162,10 @@ namespace KShootMania_Skin_Manager
             }
         }
 
+        /// <summary>
+        /// Loads the skin setup from skin.xml
+        /// </summary>
+        /// <returns>The skin setup saved in skin.xml</returns>
         public static List<string> Load_skins_xml()
         {
             if (File.Exists(ExeDir + "\\Skin.xml"))
@@ -148,10 +178,14 @@ namespace KShootMania_Skin_Manager
             }
             else
             {
-                return new string[] { "Default skin" }.ToList();
+                return new string[] { DefaultSkinName }.ToList();
             }
         }
 
+        /// <summary>
+        /// Installs the specified skin to the user's list of skins.
+        /// </summary>
+        /// <param name="zip"></param>
         public static void Install_Skin(string zip)
         {
             #region Create unique id

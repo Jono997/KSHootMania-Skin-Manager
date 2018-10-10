@@ -12,6 +12,9 @@ namespace KShootMania_Skin_Manager
 {
     public partial class SettingsForm : Form
     {
+        /// <summary>
+        /// The form in which the users adjust their settings
+        /// </summary>
         public SettingsForm()
         {
             InitializeComponent();
@@ -60,6 +63,9 @@ namespace KShootMania_Skin_Manager
             #endregion
         }
 
+        /// <summary>
+        /// Save the user's settings and close the form
+        /// </summary>
         private void SaveButton_Click(object sender, EventArgs e)
         {
             CommonData.TopPriorityOnTop = Show_hierarchy_ascendingButton.Checked;
