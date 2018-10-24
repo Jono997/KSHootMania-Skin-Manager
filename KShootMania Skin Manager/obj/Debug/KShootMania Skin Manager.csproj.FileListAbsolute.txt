@@ -1,0 +1,23 @@
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\bin\Debug\KShootMania Skin Manager.exe.config
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\bin\Debug\KShootMania Skin Manager.exe
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\bin\Debug\KShootMania Skin Manager.pdb
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\bin\Debug\ATEM.dll
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\bin\Debug\ATEM.xml
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania Skin Manager.csprojAssemblyReference.cache
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania Skin Manager.csproj.ResolveComReference.cache
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.Change_skinForm.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.HelpForm.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.MainForm.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.Manage_skinsForm.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.Properties.Resources.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.SettingsForm.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.SetupForm.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania Skin Manager.csproj.GenerateResource.cache
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania Skin Manager.csproj.CoreCompileInputs.cache
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania Skin Manager.csproj.CopyComplete
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania Skin Manager.exe
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania Skin Manager.pdb
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\obj\Debug\KShootMania_Skin_Manager.InstallForm.resources
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\bin\Debug\EasyRegistry.dll
+C:\Users\Jonathon Tripodi\Documents\GitHub\KSHootMania-Skin-Manager\KShootMania Skin Manager\bin\Debug\EasyRegistry.xml

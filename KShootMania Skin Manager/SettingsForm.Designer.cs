@@ -34,10 +34,10 @@
             this.Show_heirarchy_descendingRadioButton = new System.Windows.Forms.RadioButton();
             this.Show_hierarchy_ascendingButton = new System.Windows.Forms.RadioButton();
             this.Change_skinButton_positionRadioButton = new System.Windows.Forms.GroupBox();
-            this.Top_leftRadioButton = new System.Windows.Forms.RadioButton();
-            this.Top_rightRadioButton = new System.Windows.Forms.RadioButton();
-            this.Bottom_leftRadioButton = new System.Windows.Forms.RadioButton();
             this.Bottom_rightRadioButton = new System.Windows.Forms.RadioButton();
+            this.Bottom_leftRadioButton = new System.Windows.Forms.RadioButton();
+            this.Top_rightRadioButton = new System.Windows.Forms.RadioButton();
+            this.Top_leftRadioButton = new System.Windows.Forms.RadioButton();
             this.SaveButton = new System.Windows.Forms.Button();
             this.Hierarchy_arrangemenGroupBox.SuspendLayout();
             this.Change_skinButton_positionRadioButton.SuspendLayout();
@@ -93,16 +93,28 @@
             this.Change_skinButton_positionRadioButton.Text = "Change skin button position";
             this.toolTip1.SetToolTip(this.Change_skinButton_positionRadioButton, "The corner the change skin button will appear in");
             // 
-            // Top_leftRadioButton
+            // Bottom_rightRadioButton
             // 
-            this.Top_leftRadioButton.AutoSize = true;
-            this.Top_leftRadioButton.Location = new System.Drawing.Point(6, 19);
-            this.Top_leftRadioButton.Name = "Top_leftRadioButton";
-            this.Top_leftRadioButton.Size = new System.Drawing.Size(61, 17);
-            this.Top_leftRadioButton.TabIndex = 0;
-            this.Top_leftRadioButton.TabStop = true;
-            this.Top_leftRadioButton.Text = "Top-left";
-            this.Top_leftRadioButton.UseVisualStyleBackColor = true;
+            this.Bottom_rightRadioButton.AutoSize = true;
+            this.Bottom_rightRadioButton.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bottom_rightRadioButton.Location = new System.Drawing.Point(87, 42);
+            this.Bottom_rightRadioButton.Name = "Bottom_rightRadioButton";
+            this.Bottom_rightRadioButton.Size = new System.Drawing.Size(81, 17);
+            this.Bottom_rightRadioButton.TabIndex = 3;
+            this.Bottom_rightRadioButton.TabStop = true;
+            this.Bottom_rightRadioButton.Text = "Bottom-right";
+            this.Bottom_rightRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // Bottom_leftRadioButton
+            // 
+            this.Bottom_leftRadioButton.AutoSize = true;
+            this.Bottom_leftRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.Bottom_leftRadioButton.Name = "Bottom_leftRadioButton";
+            this.Bottom_leftRadioButton.Size = new System.Drawing.Size(75, 17);
+            this.Bottom_leftRadioButton.TabIndex = 2;
+            this.Bottom_leftRadioButton.TabStop = true;
+            this.Bottom_leftRadioButton.Text = "Bottom-left";
+            this.Bottom_leftRadioButton.UseVisualStyleBackColor = true;
             // 
             // Top_rightRadioButton
             // 
@@ -117,28 +129,16 @@
             this.toolTip1.SetToolTip(this.Top_rightRadioButton, "(Default) This one may cover up the tweet button in fullscreen mode");
             this.Top_rightRadioButton.UseVisualStyleBackColor = true;
             // 
-            // Bottom_leftRadioButton
+            // Top_leftRadioButton
             // 
-            this.Bottom_leftRadioButton.AutoSize = true;
-            this.Bottom_leftRadioButton.Location = new System.Drawing.Point(6, 42);
-            this.Bottom_leftRadioButton.Name = "Bottom_leftRadioButton";
-            this.Bottom_leftRadioButton.Size = new System.Drawing.Size(75, 17);
-            this.Bottom_leftRadioButton.TabIndex = 2;
-            this.Bottom_leftRadioButton.TabStop = true;
-            this.Bottom_leftRadioButton.Text = "Bottom-left";
-            this.Bottom_leftRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // Bottom_rightRadioButton
-            // 
-            this.Bottom_rightRadioButton.AutoSize = true;
-            this.Bottom_rightRadioButton.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Bottom_rightRadioButton.Location = new System.Drawing.Point(87, 42);
-            this.Bottom_rightRadioButton.Name = "Bottom_rightRadioButton";
-            this.Bottom_rightRadioButton.Size = new System.Drawing.Size(81, 17);
-            this.Bottom_rightRadioButton.TabIndex = 3;
-            this.Bottom_rightRadioButton.TabStop = true;
-            this.Bottom_rightRadioButton.Text = "Bottom-right";
-            this.Bottom_rightRadioButton.UseVisualStyleBackColor = true;
+            this.Top_leftRadioButton.AutoSize = true;
+            this.Top_leftRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.Top_leftRadioButton.Name = "Top_leftRadioButton";
+            this.Top_leftRadioButton.Size = new System.Drawing.Size(61, 17);
+            this.Top_leftRadioButton.TabIndex = 0;
+            this.Top_leftRadioButton.TabStop = true;
+            this.Top_leftRadioButton.Text = "Top-left";
+            this.Top_leftRadioButton.UseVisualStyleBackColor = true;
             // 
             // SaveButton
             // 

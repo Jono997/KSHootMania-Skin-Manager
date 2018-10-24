@@ -31,6 +31,7 @@ namespace KShootMania_Skin_Manager
         {
             topics = new Dictionary<string, string>();
             topics.AddRange(
+
                 #region Topics
                 "What is KShootMania?",
                 "KShootMania is a rhythm game that consists of notes along numerous lanes of a track that the player must hit when they reach the bottom of the track.\n" +
@@ -42,10 +43,18 @@ namespace KShootMania_Skin_Manager
                 "KShootMania Skin Manager is a utility that automates replacement of textures and audio files or \"skins\" for KShootMania.\n",
 
                 "Installation",
-                "You must already have KShootMania installed on your computer and have the zip file for KShootMania. If you deleted it, you'll have to redownload them again.\n" +
-                "To install KShootMania Skin Manager, create a folder you would like to install KShootMania Skin Manager to and put \"KShootMania Skin Manager.exe\" in the folder.\n" +
-                "Afterwards, run KShootMania Skin Manager.exe and go through the installation process.\n" +
+                "To install KShootMania Skin Manager, first, run the installer and select where you want KShootMania to install to, along with a zip file of KShootMania along with if you want to install a new copy of KSM for KShootMania Skin Manager, or tie it to a preexisting copy.\n" + 
+                "Do note that if you want to install KShootMania Skin Manager for all users, or not have a misspelt uninstall shortcut in the start menu, you will need to run the installer as an administrator. To do so, right click on the installer and select \"Run as administrator\".\n" +
                 "NOTE: If you want to move the installation location, you must uninstall KShootMania Skin Manager first. To do so, see \"Uninstallation\".",
+
+                "Portable installation (NOT PROPERLY IMPLEMENTED YET)",
+                "To create a portable installation of KShootMania Skin Manager for use on a flash drive or some other use, first, install KShootMania Skin Manager as normal, but you must choose to create a dedicated copy of KShootMania and install to just your user.\n" +
+                @"Afterwards, press the windows key and r at the same time and enter ""regedit"". From there, navigate to ""HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\KShootMania Skin Manager"" and delete the ""KShootMania Skin Manager"" folder." + "\n" +
+                @"After that, press windows+r again and type ""%appdata"". From there, navigate to ""Microsoft\Windows\Start Menu\Programs\Startup"" and delete the ""KShootMania Skin Manager"" shortcut." + "\n" +
+                "Following that, right click your taskbar or press CTRL+ALT+Delete and select \"Task Manager\". From there, find the process named \"KShootMania Skin Manager (32 bit)\", right click it and select \"End task\".\n" +
+                "If you didn't install KShootMania Skin Manager to where you would be using it, cut and paste the installation from where you installed it to where you intend to use it.\n" + 
+                "Open \"Install.xml\" with a text editor and look for the line that says \"<KShootManiaInstallLocation>\" and change the text inbetween the first > and the second < to just say \"kshootmania\". It should already say that at the end, but you need that end bit to be all that's there.\n" +
+                "KShootMania Skin Manager should now work portably.",
 
                 "How to use KShootMania Skin Manager",
                 "After installing KShootMania Skin Manager, while KShootMania is running, a button labelled \"Change skin\" will appear in the top-right corner. Clicking on it will open KShootMania Skin Manager.\n" +
@@ -62,7 +71,7 @@ namespace KShootMania_Skin_Manager
                 "It is recommended that you screenshot or write these instructions down as the process will prevent you from accessing this help while moving KShootMania.\n" +
                 "First, right click your taskbar or press CTRL+ALT+Delete and select \"Task Manager\". From there, find the process named \"KShootMania Skin Manager (32 bit)\", right click it and select \"End task\".\n" +
                 "Then, move KShootMania to where you want to put it.\n" +
-                "Afterwards, go into KShootMania Skin Manager, open the file \"settings.ini\" and find the line starting with \"KSMDir\". Replace the directory listed after the '=' with the new directory you put KShootMania in.\n" +
+                "Afterwards, go into KShootMania Skin Manager, open the file \"Install.xml\" and find the line starting with \"<KShootManiaInstallLocation>\". Replace the directory listed after the '>' with the new directory you put KShootMania in.\n" +
                 "Now, restart your computer and KShootMania Skin Manager should work with the new directory.",
 
                 "Uninstalling KShootMania Skin Manager",
@@ -76,7 +85,7 @@ namespace KShootMania_Skin_Manager
                 "It is recommended that you screenshot or write your perfered method's instructions down as both processes will prevent you from accessing this help during while moving KShooMania Skin Manager.\n" +
                 "\n" +
                 "METHOD 1:\n" +
-                "Firstly, go into KShootMania Skin Manager's directory and back up the skins folder and settings.ini.\n" +
+                "Firstly, go into KShootMania Skin Manager's directory and back up the skins folder, settings.ini and Install.xml.\n" +
                 "After that, uninstall KShootMania Skin Manager and reinstall it to the new location.\n" +
                 "Then, go into Task Manager and end the KShootMania Skin Manager process like you did during the uninstallation.\n" +
                 "Copy the skins folder and settings.ini file from the backup into the new installation of KShootMania Skin Manager.\n" +
@@ -99,10 +108,10 @@ namespace KShootMania_Skin_Manager
 
                 "Settings.ini breakdown",
                 "A breakdown of each setting of the settings.ini file\n" +
-                "KSMDir: The location of where the user has KShootMania. Don't change this outside of moving KShootMania. See \"Moving KShootMania after installation\" for how to do that.\n" +
                 "TopPriorityOnTop: The way skins in the current skin configuration are organised in the change skin window. If this is \"true\", skins higher in the hierarchy will appear higher in the list. If this is \"false\", skins lower in the hierarchy will appear higher in the list.\n" +
                 "ChangeSkinButtonPosition: The corner the change skin button will appear in when KShootMania is running. 0: Top-left corner. 1: Top-right corner. 2: Bottom-left corner. 3: Bottom-right corner."
                 #endregion
+                
                 );
             InitializeComponent();
         }

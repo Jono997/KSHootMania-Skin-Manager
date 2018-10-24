@@ -18,27 +18,22 @@ namespace KShootMania_Skin_Manager
         static void Main()
         {
             CommonData.Setup();
+            Runtime_context.Setup();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (!Directory.Exists(CommonData.SkinDir))
+            if (!Directory.Exists(CommonData.ExeDir + "\\Install.xml"))
+                Application.Run(new InstallForm());
+            else
             {
-                SetupForm setup = new SetupForm();
-                setup.ShowDialog();
-            }
-
-            if (Directory.Exists(CommonData.SkinDir))
-            {
-                CommonData.Load();
+                Installation_details.Setup();
+                CommonData.KSMDir = Installation_details.KShootManiaInstallLocation;
                 MainForm main = new MainForm();
-                
                 while (true)
                 {
                     Thread.Sleep(990);
                     if (KSMRunning())
-                    {
                         main.ShowDialog();
-                    }
                 }
             }
         }

@@ -27,6 +27,11 @@ namespace KShootMania_Skin_Manager
         public static string SettingsPath { get; private set; }
 
         /// <summary>
+        /// The path to the install.xml file
+        /// </summary>
+        public static string InstallPath { get; private set; }
+
+        /// <summary>
         /// The skins directory
         /// </summary>
         public static string SkinDir { get; private set; }
@@ -63,16 +68,23 @@ namespace KShootMania_Skin_Manager
         }
 
         /// <summary>
+        /// The command line arguments passed to KShootMania Skin Manager
+        /// </summary>
+        public static string[] ARGV { get; private set; }
+
+        /// <summary>
         /// Initialises variables
         /// </summary>
         public static void Setup()
         {
-            string[] directory_split = Environment.GetCommandLineArgs()[0].Split('\\');
+            ARGV = Environment.GetCommandLineArgs();
+            string[] directory_split = ARGV[0].Split('\\');
             directory_split = directory_split.SubArray(0, directory_split.Length - 1);
             ExeDir = directory_split.Stitch('\\');
             SettingsPath = ExeDir + "\\settings.ini";
             SkinDir = ExeDir + "\\Skins";
             DefaultSkinName = "Default skin";
+            InstallPath = ExeDir + "\\Install.xml";
         }
 
         /// <summary>
@@ -81,7 +93,6 @@ namespace KShootMania_Skin_Manager
         public static void Save()
         {
             string[] settings = new string[] { "[KSMSkinManager]",
-                                               "KSMDir=" + KSMDir,
                                                "TopPriorityOnTop=" + (TopPriorityOnTop ? "true" : "false"),
                                                "ChangeSkinButtonPosition=" + ((int)ChangeSkinButtonPosition).ToString()
             };
@@ -127,8 +138,6 @@ namespace KShootMania_Skin_Manager
                 string[] setting_split = setting.Split('=');
                 switch (setting_split[0])
                 {
-                    case "KSMDir":
-                        KSMDir = setting_split[1]; break;
                     case "TopPriorityOnTop":
                         TopPriorityOnTop = (setting_split[1] == "true" ? true : false); break;
                     case "ChangeSkinButtonPosition":

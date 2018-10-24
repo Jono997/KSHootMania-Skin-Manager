@@ -106,7 +106,7 @@ namespace KShootMania_Skin_Manager
 
             IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
             IWshRuntimeLibrary.IWshShortcut shortcut = shell.CreateShortcut(startup_path);
-            shortcut.TargetPath = Environment.GetCommandLineArgs()[0];
+            shortcut.TargetPath = CommonData.ARGV[0];
             shortcut.Save();
             #endregion
 
